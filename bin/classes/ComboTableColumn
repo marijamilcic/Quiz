@@ -1,0 +1,6 @@
+model.ModelTabele mt = new ModelTabele(kontroler.Kontroler.getInstance().vratiListu(), true);
+    jTableAsistenti.setModel(mt);
+    JComboBox combo = new JComboBox(new DefaultComboBoxModel(kontroler.Kontroler.getInstance().vratiListuPredmeta().toArray()));
+    TableColumnModel tcm = jTableAsistenti.getColumnModel();
+    TableColumn tc = tcm.getColumn(3);
+    tc.setCellEditor(new DefaultCellEditor(combo));
